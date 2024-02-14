@@ -108,7 +108,7 @@ services:
             - 9200:9200
             - 9300:9300
         volumes:
-            - sailelasticsearch:/usr/share/elasticsearch/data
+            - 'sail-elasticsearch:/usr/share/elasticsearch/data'
         networks:
             - sail
 networks:
