@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('twitters', function (Blueprint $table) {
             $table->id();
+            $table->date('date')->nullable();
+            $table->string('source_username')->nullable();
+            $table->text('text')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
