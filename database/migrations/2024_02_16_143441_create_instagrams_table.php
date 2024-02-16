@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('instagrams', function (Blueprint $table) {
             $table->id();
+            $table->date('date')->nullable();
+            $table->string('post_type')->nullable();
+            $table->string('source_username')->nullable();
+            $table->text('text')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
