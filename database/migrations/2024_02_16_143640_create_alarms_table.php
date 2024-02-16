@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('alarms', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->string('source')->nullable();
             $table->timestamps();
         });
     }
