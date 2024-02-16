@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlarmController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/alarm/create', [AlarmController::class, 'store']);
 
-
+Route::post('/news/create', [NewsController::class, 'store']);
 
 Route::get('/test/show', [TestController::class, 'show']);
 Route::post('/test/create', [TestController::class, 'create']);

@@ -17,6 +17,7 @@ class AlarmController extends Controller
         if ($validation == true && $userAlarmCount < 10){
             $alarm = new Alarm();
             $alarm->user_id = $request->user_id;
+            // platform example "news", "instagram", "twitter", etc.
             $alarm->platform = $request->platform;
             $alarm->source = $request->source;
             $alarm->save();
