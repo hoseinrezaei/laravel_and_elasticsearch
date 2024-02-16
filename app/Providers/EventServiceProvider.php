@@ -2,8 +2,12 @@
 
 namespace App\Providers;
 
+use App\Models\Instagram;
 use App\Models\News;
+use App\Models\Twitter;
+use App\Observers\InstagramObserver;
 use App\Observers\NewsObserver;
+use App\Observers\TwitterObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -29,6 +33,8 @@ class EventServiceProvider extends ServiceProvider
     {
         //
         News::observe(NewsObserver::class);
+        Instagram::observe(InstagramObserver::class);
+        Twitter::observe(TwitterObserver::class);
 
     }
 
